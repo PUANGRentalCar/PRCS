@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Booking</title>
+    <style>
+    body { 
+    background-color: #000000; /* Black */ color: orange; /* Text color */ 
+    font-family: Arial, sans-serif; 
+    } 
+    </style>
+     </head>
+<body>
+    <h2>Car Rental Booking Form</h2>
+    <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="pickup">Pickup Date & Time:</label>
+        <input type="datetime-local" id="pickup" name="pickup" required><br><br>
+
+        <label for="return">Return Date & Time:</label>
+        <input type="datetime-local" id="return" name="return" required><br><br>
+
+        <label for="car">Select Car:</label>
+        <select id="car" name="car">
+            <option value="Perodua Axia">Perodua Axia</option>
+            <option value="Perodua Myvi">Perodua Myvi</option>
+            <option value="Perodua BEZZA">Perodua BEZZA</option>
+            <option value="Proton SAGA">Proton SAGA</option>
+            <option ="Proton PERSONA">Proton PERSONA</option>
+            <option value="Honda CITY">Honda CITY</option>
+            <option value="Toyota Vios">Toyota VIOS</option>
+            <option value="Proton X50">Proton X50</option>
+            <option ="Perodua ARUZ">Perodua ARUZ</option>
+            <option value="Perodua ALZA">Perodua ALZA</option>
+            <option value="Toyota INNOVA">Toyota INNOVA</option>
+            <option value="Toyota FOTUNER">Toyota FORTUNER</option>
+            <option value="Toyota Hiace">Toyota Hiace</option>
+            <option value="Nissan NV350">Nissan NV350</option>
+        </select><br><br>
+
+        <label for="id_card">Upload ID Card:</label>
+        <input type="file" id="id_card" name="id_card" accept="image/*" required><br><br>
+
+        <label for="license">Upload Driving License:</label>
+        <input type="file" id="license" name="license" accept="image/*" required><br><br>
+
+        <label>
+            <input type="checkbox" name="agree" required>
+            I agree to the rental terms and conditions.
+        </label><br><br>
+
+        <button type="submit">Submit Booking</button>
+    </form>
+
+    <script>
+        document.getElementById('bookingForm').onsubmit = function() {
+            alert("Your booking request has been submitted. We will contact you soon!");
+        };
+    </script>
+</body>
+</html>
